@@ -1,0 +1,15 @@
+<h2>Celebrities Index Page</h2>
+
+<!-- forEach to have all the celebrities -->
+
+{{#each celebrities}}
+
+    <p> <a href="/celebrities/{{id}}">{{name}}</a> </p>
+
+    <form action='/celebrities/{{id}}/delete' method="Post">
+    <button type="submit">Delete</button>
+    </form>
+
+{{/each}}
+
+<a href="/celebrities/new">Add Celeb</a>
